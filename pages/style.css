@@ -49,20 +49,21 @@ a {
   color: black;
   font-size: 1.75rem;
   position: relative;
+  transition: width 1s;
 }
+
+a::before {
+  border-top: 2px solid black;
+  display: block;
+  margin-inline: auto;
+  width: 0rem;
+  content: "";
+  transition: width 0.4s;
+}
+
 a:visited {
   color: black;
 }
 a:hover::before {
-  border-top: 2px solid black;
-  display: block;
-  margin-inline: auto;
   width: 2rem;
-  content: "";
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  text-align: center;
 }
