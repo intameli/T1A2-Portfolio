@@ -15,6 +15,38 @@
     </nav>
     <main>
       <h1>Blog 1</h1>
+      <div id="carousel">
+        <img class="caroImg" src="../images/carousel1.jpeg" alt="waterfall" />
+        <img class="caroImg" src="../images/carousel2.jpeg" alt="waterfall" />
+        <img class="caroImg" src="../images/carousel3.jpeg" alt="waterfall" />
+        <img class="caroImg" src="../images/carousel4.jpeg" alt="waterfall" />
+      </div>
+      <button id="leftBtn" onclick="leftClicked()">Left</button>
+      <button id="rightBtn" onclick="rightClicked()">Right</button>
     </main>
   </body>
+  <script>
+    const imgs = document.getElementsByClassName("caroImg");
+    const right = document.getElementById("rightBtn");
+    const left = document.getElementById("leftBtn");
+    left.disabled = true;
+    let i = 0;
+    imgs[i].style.zIndex = i + 1;
+    function leftClicked() {
+      right.disabled = false;
+      imgs[i].style.zIndex = 0;
+      i--;
+      if (i === 0) {
+        left.disabled = true;
+      }
+    }
+    function rightClicked() {
+      left.disabled = false;
+      i++;
+      imgs[i].style.zIndex = i + 1;
+      if (i === 3) {
+        right.disabled = true;
+      }
+    }
+  </script>
 </html>
