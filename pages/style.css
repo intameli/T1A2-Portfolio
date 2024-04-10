@@ -22,38 +22,28 @@ html {
 body {
   max-width: 1000px;
   margin-inline: auto;
-  /* height: 100vh; */
   display: grid;
   grid-template-rows: auto auto 1fr;
 }
 
 main {
-  background: rgb(37, 77, 116);
-  background: linear-gradient(
-    180deg,
-    rgba(37, 77, 116, 1) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  height: 63%;
 }
 
 nav {
   padding: 0.5rem;
-  background: rgb(37, 77, 116);
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center;
 }
 
-a {
+nav a {
   text-decoration: none;
   color: black;
   font-size: 1.75rem;
-  position: relative;
   transition: width 1s;
 }
 
-a::before {
+nav a::before {
   border-top: 2px solid black;
   display: block;
   margin-inline: auto;
@@ -62,11 +52,35 @@ a::before {
   transition: width 0.4s;
 }
 
-a:visited {
+nav a:visited {
   color: black;
 }
-a:hover::before {
+nav a:hover::before {
   width: 2rem;
+}
+
+.blogNav:hover > .blogNavWrapper {
+  max-height: 15rem;
+  opacity: 1;
+}
+
+.blogNav {
+  position: relative;
+}
+
+.blogNavWrapper {
+  z-index: 5;
+  opacity: 0;
+  position: absolute;
+  display: grid;
+  gap: 0.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s linear;
+  background: rgba(255, 255, 255, 0.606);
+  border-radius: 5px;
+  padding: 0.5rem;
+  left: -0.5rem;
 }
 
 #carousel {
