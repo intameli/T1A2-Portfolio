@@ -10,10 +10,7 @@
 }
 
 img,
-picture,
-video,
-canvas,
-svg {
+video {
   display: block;
   max-width: 100%;
 }
@@ -140,6 +137,15 @@ nav a:hover::before {
   gap: 16px;
 }
 
+@media only screen and (max-width: 600px) {
+  .twoColumn {
+    grid-template-columns: 1fr;
+  }
+  video {
+    display: none;
+  }
+}
+
 /* experience card component */
 .card {
   border: darkgray 1px solid;
@@ -161,10 +167,6 @@ nav a:hover::before {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.card h2 {
-  align-self: flex-end;
 }
 
 #hospitalImg {
