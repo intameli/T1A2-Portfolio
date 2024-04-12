@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤓</text></svg>"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Jacob's Site</title>
   </head>
   <body>
+    <!-- header component  -->
     <img src="../images/banner.jpg" alt="banner image" />
+    <!-- nav component  -->
     <nav>
-      <a href="index.html">Home</a>
+      <a href="../index.html">Home</a>
       <a href="info.html">Info</a>
       <div class="blogsNavWrapper">
         <a href="blogList.html">Blog</a>
@@ -23,7 +29,7 @@
       </div>
     </nav>
     <main>
-      <h1>Blog 1</h1>
+      <h1>Canada Holiday 2024</h1>
       <div id="carousel">
         <img class="caroImg" src="../images/carousel1.jpeg" alt="waterfall" />
         <img class="caroImg" src="../images/carousel2.jpeg" alt="waterfall" />
@@ -33,29 +39,31 @@
       <button id="leftBtn" onclick="leftClicked()">Left</button>
       <button id="rightBtn" onclick="rightClicked()">Right</button>
     </main>
-  </body>
-  <script>
-    const imgs = document.getElementsByClassName("caroImg");
-    const right = document.getElementById("rightBtn");
-    const left = document.getElementById("leftBtn");
-    left.disabled = true;
-    let i = 0;
-    imgs[i].style.zIndex = i + 1;
-    function leftClicked() {
-      right.disabled = false;
-      imgs[i].style.zIndex = 0;
-      i--;
-      if (i === 0) {
-        left.disabled = true;
-      }
-    }
-    function rightClicked() {
-      left.disabled = false;
-      i++;
+    <script>
+      const imgs = document.getElementsByClassName("caroImg");
+      const right = document.getElementById("rightBtn");
+      const left = document.getElementById("leftBtn");
+      left.disabled = true;
+      let i = 0;
       imgs[i].style.zIndex = i + 1;
-      if (i === 3) {
-        right.disabled = true;
+      function leftClicked() {
+        right.disabled = false;
+        imgs[i].style.zIndex = 0;
+        i--;
+        if (i === 0) {
+          left.disabled = true;
+        }
       }
-    }
-  </script>
+      function rightClicked() {
+        left.disabled = false;
+        i++;
+        imgs[i].style.zIndex = i + 1;
+        if (i === 3) {
+          right.disabled = true;
+        }
+      }
+    </script>
+    <!-- footer component  -->
+    <footer>Copywrite © 2024 Jacob Smith</footer>
+  </body>
 </html>

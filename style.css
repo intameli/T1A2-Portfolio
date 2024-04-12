@@ -49,7 +49,7 @@ nav a::before {
   margin-inline: auto;
   width: 0rem;
   content: "";
-  transition: width 0.2s;
+  transition: width 0.15s;
 }
 
 nav a:visited {
@@ -71,7 +71,7 @@ nav a:hover::before {
   gap: 0.5rem;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-in-out, opacity 0.2s linear;
+  transition: max-height 0.15s ease-in-out, opacity 0.15s linear;
   background: rgb(255, 255, 255);
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -108,6 +108,10 @@ nav a:hover::before {
   .infoContent {
     grid-row-end: span 2;
   }
+}
+
+h1 {
+  font-size: 2rem;
 }
 
 h2 {
