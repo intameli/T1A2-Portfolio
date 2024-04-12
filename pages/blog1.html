@@ -32,12 +32,12 @@
       <article>
         <h1>Canada Holiday 2024</h1>
         <p>
-          In february of 2024 I flew to British Columbia, Canada for a two and a
-          half week holiday. I spent most of my time snowboarding in Sun Peaks
-          which is about a four and a half hour drive from Vancouver. While
-          staying in Sun Peaks I took a day off snowboardng, rented a car and
-          drove to Wells Gray Provincial Park to see the beautiful waterfalls
-          there. After Sun Peaks I spent three days in Vancouver sightseeing and
+          In february of 2024 I flew to British Columbia for a two and a half
+          week holiday. I spent most of my time snowboarding in Sun Peaks which
+          is about a four and a half hour drive from Vancouver. While staying in
+          Sun Peaks I took a day off snowboardng, rented a car and drove to
+          Wells Gray Provincial Park to see the beautiful waterfalls there.
+          After Sun Peaks I spent three days in Vancouver sightseeing and
           hiking. Listed below are some of the waterfalls I saw in BC in the
           order they appear in the gallery below.
         </p>
@@ -59,10 +59,12 @@
           <img class="caroImg" src="../images/carousel3.jpeg" alt="waterfall" />
           <img class="caroImg" src="../images/carousel4.jpeg" alt="waterfall" />
         </div>
-        <button id="leftBtn" onclick="leftClicked()">Left</button>
-        <button id="rightBtn" onclick="rightClicked()">Right</button>
+        <div class="buttons">
+          <button id="leftBtn" onclick="leftClicked()">Left</button>
+          <button id="rightBtn" onclick="rightClicked()">Right</button>
+        </div>
       </section>
-      <section><video controls src="../images/snowboarding.mp4"></section>
+      <video controls src="../images/snowboarding.mp4"></video>
     </main>
     <script>
       const imgs = document.getElementsByClassName("caroImg");

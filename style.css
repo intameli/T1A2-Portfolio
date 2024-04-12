@@ -151,6 +151,7 @@ nav a:hover::before {
   border: darkgray 1px solid;
   border-radius: 20px;
   background: rgb(250, 250, 250);
+  filter: drop-shadow(0.125rem 0.125rem 0.125rem rgb(168, 168, 168));
   padding: 16px;
   text-align: center;
   display: grid;
@@ -178,7 +179,7 @@ nav a:hover::before {
   border-radius: 25%;
 }
 
-/* image carousel component */
+/* image carousel component and video style */
 .carouselWrapper {
   grid-area: 2/1/3/3;
 }
@@ -189,8 +190,11 @@ nav a:hover::before {
   grid-template-rows: 2vh 2vh 2vh min-content;
 }
 
-#carousel img {
+#carousel img,
+video {
   border: 1px black solid;
+  border-radius: 10px;
+  filter: drop-shadow(0.25rem 0.25rem 0.25rem rgb(88, 88, 88));
 }
 
 #carousel > img:nth-of-type(1) {
@@ -215,6 +219,29 @@ nav a:hover::before {
   grid-column: 4/8;
   grid-row-start: 4;
   order: 1;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 8px;
+}
+
+button {
+  background: none;
+  /* color: inherit; */
+  border: none;
+  /* padding: 0; */
+  /* font: inherit; */
+  font-size: 2rem;
+  cursor: pointer;
+  /* outline: none; */
+  border: 2px solid black;
+  background: rgb(250, 250, 250);
+  padding: 8px;
+  border-radius: 20px;
+  width: 10rem;
 }
 
 /* footer component */
