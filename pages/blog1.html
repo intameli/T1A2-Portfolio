@@ -21,10 +21,6 @@
         <a href="blogList.html">Blog</a>
         <div class="blogsNav">
           <a href="blog1.html">Canada</a>
-          <a href="blog2.html">Blog 2</a>
-          <a href="blog3.html">Blog 3</a>
-          <a href="blog4.html">Blog 4</a>
-          <a href="blog5.html">Blog 5</a>
         </div>
       </div>
     </nav>
@@ -74,10 +70,9 @@
       const left = document.getElementById("leftBtn");
       left.disabled = true;
       let i = 0;
-      imgs[i].style.zIndex = i + 1;
       function leftClicked() {
         right.disabled = false;
-        imgs[i].style.zIndex = 0;
+        imgs[i].style.zIndex = 4 - i;
         i--;
         if (i === 0) {
           left.disabled = true;
@@ -86,7 +81,7 @@
       function rightClicked() {
         left.disabled = false;
         i++;
-        imgs[i].style.zIndex = i + 1;
+        imgs[i].style.zIndex = 10 + i;
         if (i === 3) {
           right.disabled = true;
         }
